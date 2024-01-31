@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->text('titre'); // service title
-            $table->text('description'); // service description
+            $table->string('titre'); // service title
+            $table->string('slug'); // service slug
+            $table->text('body'); // service description
             $table->decimal('prix',10,2); // service prix
-            $table->text('image')->nullable(); // service image
-            $table->string('user_contact'); // service user contact
+            $table->string('image'); // service image
+            $table->string('user_phone'); // service user contact
             $table->string('user_email'); // l'e-mail de l'utilisateur
             $table->string('fname'); //first name user
             $table->string('lname');//last name user
@@ -28,6 +29,8 @@ return new class extends Migration
         });
     }
 
+
+
     /**
      * Reverse the migrations.
      */
@@ -36,3 +39,4 @@ return new class extends Migration
         Schema::dropIfExists('services');
     }
 };
+

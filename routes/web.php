@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/','HomeController@index')->name('service');
+Route::get('/service/{id}','HomeController@show')->name('service.show');
