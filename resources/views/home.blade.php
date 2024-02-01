@@ -1,6 +1,6 @@
+@include('master.header')
 @extends('master.layout')
-@extends('master.header')
-@extends('master.nav')
+
 
 @section('style')
     <style>
@@ -12,7 +12,7 @@
 
 
 @section('title')
-    Acceuil
+    Home
 @endsection
 @section('content')
 
@@ -23,7 +23,7 @@
         <div class="flex flex-wrap -mx-4 justify-center">
             @foreach ($services as $service)
                 <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden mb-4 mx-4">
-                    <img class="w-full h-48 object-cover" src="{{ asset($service->image) }}" alt="Service Image">
+                    <img class="w-full h-48 object-cover" src="{{ asset('./uploads/' .$service->image) }}" alt="Service Image">
                     <div class="p-4">
                         <div class="flex items-center mb-2">
                             <svg class="text-blue-600 w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -50,7 +50,7 @@
                             </button>
                         </div>
                         <div>
-                            <a  href="{{ route('service.show', $service->id) }}"
+                            <a  href="{{ route('service.show', $service->slug) }}"
                                 class="inline-block pb-1 mt-2 text-base font-black text-blue-600 uppercase border-b border-transparent hover:border-blue-600">Read
                                 More -></a>
                         </div>

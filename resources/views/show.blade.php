@@ -1,18 +1,19 @@
 @extends('master.header')
-    <a href="{{ route('service') }}" class="back text-gray-600 hover:text-gray-800 ml-4 mt-4">
-        <i class="fa-solid fa-arrow-left"></i> Back
-    </a>
+
+<a href="{{ route('service') }}" class="back text-gray-600 hover:text-gray-800 ml-4 mt-10 p-20 m-20">
+    <i class="fa-solid fa-arrow-left"></i> Back
+</a>
 <div class="mt-10 mb-4 md:mb-0 w-full max-w-screen-md mx-auto relative" style="height: 24em;">
     <div class="absolute left-0 bottom-0 w-full h-full z-10" style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
    
-    <img src="{{ asset($services->image) }}" class="absolute left-0 top-0 w-full h-full z-0 object-cover" />
+    <img src="{{ asset('./uploads/'.$services->image) }}" class="absolute left-0 top-0 w-full h-full z-0 object-cover" />
     <div class="p-4 absolute bottom-0 left-0 z-20">
         <a href="#" class="px-4 py-1 bg-yellow-500 text-white inline-flex items-center justify-center mb-2">{{ $services->category->titre }}</a>
         <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
-            {{ $services->titre }}
+           {{ Str::limit($services->titre,20) }}
         </h2>
         <div class="flex mt-3">
-            <img src="https://randomuser.me/api/portraits/men/97.jpg" class="h-10 w-10 rounded-full mr-2 object-cover" />
+            <img src="{{ asset('./uploads/'.$services->image_user) }}" class="h-10 w-10 rounded-full mr-2 object-cover" />
             <div>
                 <p class="font-semibold text-gray-200 text-sm"> {{ $services->fname }} {{ $services->lname }} </p>
                 <p class="font-semibold text-gray-400 text-xs">{{ $services->created_at }}</p>
@@ -20,7 +21,13 @@
         </div>
     </div>
 </div>
+<div class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
+    <p class="pb-6">Prix :</p>
+    <div class="border-l-4 border-gray-500 pl-4 mb-6 italic rounded">
+    {{ $services->prix }} DH
+    </div>
 
+</div>
 <div class="px-4 lg:px-0 mt-12 text-gray-700 max-w-screen-md mx-auto text-lg leading-relaxed">
     <p class="pb-6">Description :</p>
     <div class="border-l-4 border-gray-500 pl-4 mb-6 italic rounded">
@@ -35,7 +42,7 @@
         <div class="p-4">
             <h2 class="text-2xl font-semibold text-gray-800 leading-tight">User:</h2>
             <div class="flex mt-5">
-                <img src="https://randomuser.me/api/portraits/men/97.jpg" class="h-10 w-10 rounded-full mr-2 object-cover" />
+                <img src="{{ asset('./uploads/'.$services->image_user) }}" class="h-10 w-10 rounded-full mr-2 object-cover" />
                 <div>
                     <p class="font-semibold text-gray-700 text-sm">{{ $services->fname }} {{ $services->lname }}</p>
                     <p class="font-semibold text-gray-500 text-xs">Date of Creation</p>

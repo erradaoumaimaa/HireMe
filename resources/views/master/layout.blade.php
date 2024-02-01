@@ -1,6 +1,5 @@
 @extends('master.header')
-
-
+@include('master.nav')
     <div class="sm:flex items-center max-w-screen-xl ml-10">
         <div class="sm:w-1/2 p-10">
             <div class="image object-center text-center">

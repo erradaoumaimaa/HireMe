@@ -13,17 +13,18 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('titre'); // service title
-            $table->string('slug'); // service slug
-            $table->text('body'); // service description
-            $table->decimal('prix',10,2); // service prix
-            $table->string('image'); // service image
-            $table->string('user_phone'); // service user contact
-            $table->string('user_email'); // l'e-mail de l'utilisateur
-            $table->string('fname'); //first name user
-            $table->string('lname');//last name user
-            $table->unsignedBigInteger('cat_id'); // cat_id reference to id of category
-            $table->timestamps(); // service created
+            $table->string('titre'); 
+            $table->string('slug'); 
+            $table->text('body'); 
+            $table->decimal('prix',10,2); 
+            $table->string('image'); 
+            $table->string('user_phone'); 
+            $table->string('user_email'); 
+            $table->string('fname'); 
+            $table->string('lname');
+            $table->string('image_user')->nullable();
+            $table->unsignedBigInteger('cat_id'); 
+            $table->timestamps(); 
             //foreing key :
             $table->foreign('cat_id')->references('id')->on('categories')->onDelete('cascade');
         });

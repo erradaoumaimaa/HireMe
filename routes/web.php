@@ -18,4 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/','HomeController@index')->name('service');
-Route::get('/service/{id}','HomeController@show')->name('service.show');
+Route::get('/service/{slug}','HomeController@show')->name('service.show');
+Route::get('/create/service','HomeController@create')->name('service.create');
+Route::post('/add/service','HomeController@store')->name('service.store');

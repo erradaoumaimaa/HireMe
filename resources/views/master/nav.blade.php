@@ -15,9 +15,9 @@
     </div>
     <!-- Navbar links -->
     <div id="nav-links" class="hidden md:flex md:items-center md:space-x-4 justify-center w-full">
-        <a class="hover:text-gray-200" href="#">Home</a>
-        <a class="hover:text-gray-200" href="#">Add Service</a>
-        <a class="hover:text-gray-200" href="#">About</a>
+        <a class="hover:text-gray-200" href="{{ url('/') }}">Home</a>
+        <a class="hover:text-gray-200" href="{{ route('service.create') }}">Add Service</a>
+        <a class="hover:text-gray-200" href="{{ url('/') }}">About</a>
         <a class="hover:text-gray-200" href="#">Contact Us</a>
     </div>
     <!-- Sidebar menu for small screens -->
