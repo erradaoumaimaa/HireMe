@@ -12,27 +12,6 @@
 La plateforme HireMe a pour objectif de créer un espace dédié aux services locaux, permettant aux utilisateurs de proposer leurs compétences dans des domaines tels que la plomberie, la peinture, le jardinage, etc. Les autres utilisateurs peuvent consulter ces services et entrer en contact avec les prestataires. Ce projet est développé en utilisant le framework Laravel.
 
 
-### Diagrammes UML
-
-1. **Diagramme de Cas d'Utilisation Auteur:**
-
-   - Illustrant les interactions entre les acteurs et le système, détaillant les fonctionnalités offertes.
-   - ![USE CASE](./UML/images/use_case_Auteur.png)
-2. **Diagramme de Cas d'Utilisation Admin:**
-
-   - Illustrant les interactions entre les acteurs et le système, détaillant les fonctionnalités offertes.
-   - ![USE CASE](./UML/images/use_case_Admin.png)
-3. **Diagramme de Cas d'Utilisation Visiteur:**
-
-   - Illustrant les interactions entre les acteurs et le système, détaillant les fonctionnalités offertes.
-   - ![USE CASE](./UML/images/use_case_Visitor.png)
-
-
-2. **Diagramme de Classes:**
-
-   - Présentant les classes du système, leurs attributs et relations pour une vision structurée du code.
-   - ![CLASS](./UML/images/d_classe.png)
-
 
 
 ## 💻 Technologies Utilisées
