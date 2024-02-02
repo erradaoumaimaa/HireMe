@@ -78,8 +78,9 @@ class HomeController extends Controller
             // $service->prix=$request->prix;
             // $service->cat_id =$request->cat_id ;
             // $service->image ="https://via.placeholder.com/640x480.png/00aa33?text=new service";
-            echo 'article ajouter';
-             return view('create', compact('categories'));
+       
+            //  return view('create', compact('categories'));
+            return redirect()->route('service')->with('success', 'Service created successfully');
 
     }
    
