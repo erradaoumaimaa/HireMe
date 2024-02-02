@@ -1,33 +1,59 @@
-   <!-- Navbar -->
-   <nav class="flex flex-col md:flex-row bg-blue-900 text-white w-full">
-    <div class="px-5 xl:px-12 py-6 flex items-center justify-between">
-        <a class="text-3xl font-bold font-heading" href="#">
-            HIREME
-        </a>
-        <!-- Responsive burger menu button -->
-        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </button>
-    </div>
-    <!-- Navbar links -->
-    <div id="nav-links" class="hidden md:flex md:items-center md:space-x-4 justify-center w-full">
-        <a class="hover:text-gray-200" href="{{ url('/') }}">Home</a>
-        <a class="hover:text-gray-200" href="{{ route('service.create') }}">Add Service</a>
-        <a class="hover:text-gray-200" href="{{ url('/') }}">About</a>
-        <a class="hover:text-gray-200" href="#">Contact Us</a>
-    </div>
-    <!-- Sidebar menu for small screens -->
-    <div id="sidebar"
-        class="hidden md:hidden fixed top-0 left-0 h-full w-full bg-blue-900 text-white transition-transform transform -translate-x-full">
-        <div class="flex flex-col items-center space-y-4 mt-16">
-            <a class="hover:text-gray-200" href="#">Home</a>
-            <a class="hover:text-gray-200" href="#">Add Service</a>
-            <a class="hover:text-gray-200" href="#">About us</a>
-            <a class="hover:text-gray-200" href="#">Contact Us</a>
+@include('master.header')
+
+<nav class="py-2.5 dark:bg-gray-900" style="background-color: #1B1267; color: white;">
+    <div class="flex items-center justify-between max-w-screen-xl mx-auto">
+        <div class="flex items-center">
+            <span class="text-xl font-semibold">Hireware</span>
+        </div>
+
+        <div class="lg:hidden">
+            <button data-collapse-toggle="mobile-menu" type="button"
+                class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div class="hidden lg:flex items-center space-x-4">
+            <a href="{{ url('/') }}" class="flex items-center text-white">
+                <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                Home
+            </a>
+
+            <a href="{{ route('service.create') }}" class="flex items-center text-white">
+                <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Add Service
+            </a>
         </div>
     </div>
+
+    <div class="lg:hidden mt-4" id="mobile-menu">
+        <ul class="text-white">
+            <li>
+                <a href="{{ url('/') }}" class="flex items-center text-white">
+                    <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('service.create') }}" class="flex items-center text-white">
+                    <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Add Service
+                </a>
+            </li>
+        </ul>
+    </div>
 </nav>
+
+<script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>

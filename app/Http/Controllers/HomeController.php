@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     //automatic index execute
     public function index(){
-      $services = Service::latest()->paginate(6);
+      $services = Service::latest()->paginate(8);
       return view('home')->with(['services' => $services]);
     }
 
@@ -38,8 +38,8 @@ class HomeController extends Controller
                     'required',
                     Rule::in(Category::pluck('id')->toArray()),
                 ],
-                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate that image is an image file
-                'image_user' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Validate that image is an image file
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg', // Validate that image is an image file
+                'image_user' => 'image|mimes:jpeg,png,jpg,gif,svg', // Validate that image is an image file
             ]);
             $categories = Category::all();
 
