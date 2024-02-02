@@ -54,7 +54,7 @@ La plateforme HireMe a pour objectif de créer un espace dédié aux services lo
 
 ## Project Links
 
-- 📂 **GitHub Repository:** [Project Repository](https://www.canva.com/design/DAF2e8Jrg-8/Wh2in64tpoPV6sHFTUDAmQ/edit)
+- 📂 **GitHub Repository:** [Project Repository](https://github.com/erradaoumaimaa/HireMe)
 
 
 ## 📁 Structure du Projet
