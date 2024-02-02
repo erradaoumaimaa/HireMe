@@ -3,6 +3,7 @@
 <nav class="py-2.5 dark:bg-gray-900" style="background-color: #1B1267; color: white;">
     <div class="flex items-center justify-between max-w-screen-xl mx-auto">
         <div class="flex items-center">
+
             <span class="text-xl font-semibold">Hireware</span>
         </div>
 
