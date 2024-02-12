@@ -21,3 +21,4 @@ Route::get('/','HomeController@index')->name('service');
 Route::get('/service/{slug}','HomeController@show')->name('service.show');
 Route::get('/create/service','HomeController@create')->name('service.create');
 Route::post('/add/service','HomeController@store')->name('service.store');
+Route::delete('/service/{id}','HomeController@destroy')->name('service.destroy');

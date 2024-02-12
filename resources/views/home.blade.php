@@ -39,6 +39,12 @@
                                 <a href="{{ route('service.show', $service->slug) }}"
                                     class="inline-block pb-1 mt-2 text-base font-black text-red-600 uppercase border-b border-transparent hover:border-blue-600">Read
                                     More -></a>
+
+                                    <form method="post" action="{{ route('service.destroy' , $service->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                                    </form>
                             </div>
                         </div>
                     </div>

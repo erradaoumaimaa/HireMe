@@ -86,4 +86,11 @@ class HomeController extends Controller
 
     }
 
+
+    public function destroy($id){
+        $service= Service::find($id);
+        $service->delete();
+        return redirect('/')->with('success', 'Service deleted');
+    }
+
 }
