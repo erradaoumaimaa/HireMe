@@ -5,7 +5,7 @@ Use App\Models\Service;
 Use App\Models\Category;
 Use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule; 
+use Illuminate\Validation\Rule;
 class HomeController extends Controller
 {
     //automatic index execute
@@ -32,6 +32,7 @@ class HomeController extends Controller
                 'lname' => 'required|string|min:3|max:100',
                 'user_email' => 'required|email|max:255',
                 'user_phone' => 'required|string|max:20',
+
                 'body' => 'required|string|min:10|max:1000',
                 'prix' => 'required|numeric',
                 'cat_id' => [
@@ -78,10 +79,11 @@ class HomeController extends Controller
             // $service->prix=$request->prix;
             // $service->cat_id =$request->cat_id ;
             // $service->image ="https://via.placeholder.com/640x480.png/00aa33?text=new service";
-       
+
             //  return view('create', compact('categories'));
-            return redirect()->route('service')->with('success', 'Service created successfully');
+            return redirect('/')->with('success', 'Service created successfully');
+            // return redirect()->route('service')->with('success', 'Service created successfully');
 
     }
-   
+
 }
